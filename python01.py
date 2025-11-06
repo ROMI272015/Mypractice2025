@@ -1,1 +1,2 @@
-print ("helloo world")
+print ("hello world")
+echo "what ur name?"
