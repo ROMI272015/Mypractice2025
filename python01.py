@@ -1,3 +1,10 @@
-print ("hello world")
+x = 10
+y = 4
 
-echo "hello Rohin this is my first  agent"
+print(f"Addition: {x + y}")
+print(f"Subtraction: {x - y}")
+print(f"Multiplication: {x * y}")
+print(f"Division: {x / y}")
+print(f"Power: {x ** y}")
+
+print ("hello world")
