@@ -6,6 +6,11 @@ pipeline {
     }
 
     stages {
+        stage('Hello') {
+        echo "Hello Rohin 👋 — your agent is working fine!"
+           }
+        }
+    
         stage('Build') {
             steps {
                 echo "Building..."
