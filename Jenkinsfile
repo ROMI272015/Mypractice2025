@@ -1,8 +1,8 @@
 pipeline {
-    agent { label 'docker-agent-alpine' }
+    agent any
 
     triggers {
-        pollSCM('*/5 * * * *')
+        pollSCM('*/1 * * * *')
     }
 
     stages {
@@ -10,6 +10,7 @@ pipeline {
             steps {
                 echo "Building..."
                 sh '''
+                    pip install -r requirement.txt
                     echo "doing build stuff..."
                 '''
             }
@@ -19,6 +20,8 @@ pipeline {
             steps {
                 echo "Testing..."
                 sh '''
+                    python3 hello.py
+                    python3 hello.py --name=Brad
                     echo "doing test stuff..."
                 '''
             }
